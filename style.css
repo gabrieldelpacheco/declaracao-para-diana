@@ -1,0 +1,221 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BASE */
+body {
+    font-family: 'Georgia', serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #f5f5f5;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+}
+
+.intro {
+    font-size: 1.2rem;
+    line-height: 1.9;
+    margin-bottom: 25px;
+    opacity: 0;
+    animation: fadeUp 1.8s ease forwards;
+}
+
+.intro.secondary {
+    font-style: italic;
+    color: #dcdcdc;
+    margin-bottom: 50px;
+}
+
+/* ESTRUTURA */
+.section {
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    max-width: 1000px;
+    width: 100%;
+    text-align: center;
+    animation: fadeUp 1.6s ease forwards;
+    opacity: 0;
+}
+
+/* TÍTULOS */
+.title {
+    font-size: 3rem;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+    animation: fadeDown 1.2s ease forwards;
+    opacity: 0;
+}
+
+strong {
+    font-size: 2em;
+}
+
+/* TEXTO */
+p {
+    font-size: 1.15rem;
+    line-height: 1.9;
+    margin-bottom: 22px;
+}
+
+/* DESTAQUES */
+.highlight {
+    font-style: italic;
+    color: #ffd369;
+    margin-top: 30px;
+}
+
+.final {
+    font-size: 1.4rem;
+    margin-top: 40px;
+}
+
+.final strong {
+    display: block;
+    margin-top: 10px;
+    font-size: 1.6rem;
+}
+
+/* VÍDEOS */
+.videos {
+    background: rgba(0, 0, 0, 0.15);
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.video iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+/* FOOTER */
+.footer {
+    background: rgba(0, 0, 0, 0.25);
+    padding: 50px 20px;
+    width: 100%;
+}
+
+.footer-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    animation: fadeUp 1.2s ease forwards;
+    opacity: 0;
+}
+
+/* TEXTOS */
+.footer-text {
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.footer-heart {
+    font-size: 1.25rem;
+    line-height: 1.6;
+}
+
+.footer-heart strong {
+    color: #ffd369;
+}
+
+.footer-signature {
+    font-size: 0.95rem;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+/* CORAÇÃO ANIMADO */
+.footer-heart span {
+    display: inline-block;
+    animation: pulse 1.6s infinite;
+}
+
+/* ANIMAÇÃO */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.12); }
+    100% { transform: scale(1); }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .footer {
+        padding: 40px 16px;
+    }
+
+    .footer-text {
+        font-size: 1rem;
+    }
+
+    .footer-heart {
+        font-size: 1.15rem;
+    }
+
+    .footer-signature {
+        font-size: 0.9rem;
+    }
+}
+
+/* TELAS GRANDES */
+@media (min-width: 1200px) {
+    .footer {
+        padding: 70px 20px;
+    }
+}
+
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+    100% { transform: scale(1); }
+}
+
+
+/* ANIMAÇÕES */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVO */
+@media (max-width: 600px) {
+    .title {
+        font-size: 2.2rem;
+    }
+
+    p {
+        font-size: 1.05rem;
+    }
+}
