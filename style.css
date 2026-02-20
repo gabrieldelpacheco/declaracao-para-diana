@@ -15,7 +15,7 @@ body {
 }
 
 .intro {
-    font-size: 1.2rem;
+    font-size: 1rem;
     line-height: 1.9;
     margin-bottom: 25px;
     opacity: 0;
@@ -53,12 +53,12 @@ body {
 }
 
 strong {
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 /* TEXTO */
 p {
-    font-size: 1.15rem;
+    font-size: 1rem;
     line-height: 1.9;
     margin-bottom: 22px;
 }
@@ -262,29 +262,46 @@ p {
 
 /* ================= CARTAS ================= */
 
+/* ================= CARTAS - 2 POR LINHA ================= */
+
 .cartas-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+    display: flex;
+    flex-direction: column;
     gap: 30px;
     margin-top: 40px;
 }
 
 .carta {
     background: rgba(255,255,255,0.08);
-    padding: 30px;
-    border-radius: 14px;
+    padding: 20px;
+    border-radius: 18px;
     backdrop-filter: blur(6px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-    transition: 0.4s;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+    transition: 0.4s ease;
+    text-align: left;
+    min-height: 250px;
 }
 
 .carta:hover {
-    transform: translateY(-10px) scale(1.02);
+    transform: translateY(-8px);
 }
 
 .carta h3 {
     color: #ffd369;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.carta p {
+    font-size: .9rem;
+    line-height: 1.5;
+}
+
+/* Responsivo - celular */
+@media (max-width: 768px) {
+    .cartas-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* ================= FOTOS ================= */
