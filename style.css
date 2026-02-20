@@ -334,36 +334,3 @@ p {
     cursor: pointer;
 }
 
-/* ================= FUNDO ANIMADO - PÁGINA MÚSICAS ================= */
-
-body.videos-page {
-    background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #1b2735) !important;
-    background-size: 400% 400%;
-    animation: gradientMove 20s ease infinite;
-}
-
-/* Camada suave de luz */
-.videos-page::before {
-    content: "";
-    position: fixed;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle at center, rgba(255,255,255,0.05), transparent 60%);
-    animation: lightFloat 25s linear infinite;
-    pointer-events: none;
-}
-
-/* Movimento do gradiente */
-@keyframes gradientMove {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-/* Movimento da luz */
-@keyframes lightFloat {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
