@@ -223,26 +223,29 @@ p {
 /* ================= NAV ================= */
 
 .nav {
-    position: sticky;
-    top: 0;
+    width: 100%;
+    padding: 18px 0;
     background: rgba(0,0,0,0.35);
     backdrop-filter: blur(8px);
-    padding: 15px 20px;
-    z-index: 1000;
 }
 
 .nav-content {
+    max-width: 1000px;
+    margin: 0 auto;          /* centraliza o container */
     display: flex;
-    justify-content: center;
+    justify-content: center; /* centraliza os links */
+    align-items: center;
     gap: 35px;
+    flex-wrap: wrap;
 }
 
 .nav a {
     color: #f5f5f5;
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     letter-spacing: 1px;
     position: relative;
+    transition: 0.3s;
 }
 
 .nav a::after {
@@ -339,15 +342,36 @@ p {
     align-items: center;
 }
 
-.lightbox-img {
-    max-width: 90%;
-    max-height: 90%;
-    border-radius: 14px;
-    box-shadow: 0 0 30px rgba(0,0,0,0.8);
-    animation: fadeUp 0.4s ease;
+.lightbox img{
+    max-width: 95vw;
+    max-height: 95vh;
+    object-fit: contain;
+    border-radius:12px;
+    transition: transform 0.3s ease;
+    box-shadow:0 0 40px rgba(0,0,0,0.8);
 }
 
 .fotos-grid img {
     cursor: pointer;
 }
 
+/* ================= CARTAS DIGITALIZADAS ================= */
+
+.cartas-escritas-grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+    margin-top:40px;
+}
+
+.carta-escrita img{
+    width:100%;
+    border-radius:14px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.4);
+    transition:0.4s;
+    cursor:pointer;
+}
+
+.carta-escrita img:hover{
+    transform:scale(1.05);
+}
