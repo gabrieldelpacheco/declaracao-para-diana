@@ -401,3 +401,36 @@ p {
     border-radius:10px;
     box-shadow:0 0 20px rgba(255,211,105,0.4);
 }
+
+/* ================= MÚSICAS AUTORAIS ================= */
+
+.musica-box{
+    margin-top:60px;
+    padding:30px;
+    background:rgba(255,255,255,0.08);
+    border-radius:15px;
+    backdrop-filter:blur(6px);
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+.musica-titulo{
+    margin-bottom:20px;
+    color:#ffd369;
+}
+
+.player{
+    width:100%;
+    margin-bottom:5px;
+}
+
+.letra{
+    text-align:left;
+    line-height:1;
+    font-style:italic;
+    white-space:pre-line;
+}
+
+.letra p{
+    margin-bottom: 2px;   /* diminui espaço entre blocos */
+    line-height: 1;      /* reduz altura da linha */
+}
