@@ -443,3 +443,16 @@ p {
     gap:30px;
     margin-top:40px;
 }
+
+/* ================= AUTORIA MÚSICAS ================= */
+
+.autor-info{
+    margin-top:15px;
+    margin-bottom:40px;
+    font-size:0.95rem;
+    opacity:0.8;
+    font-style:italic;
+    max-width:700px;
+    margin-left:auto;
+    margin-right:auto;
+}
