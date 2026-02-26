@@ -1,405 +1,180 @@
-/* RESET */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* ================= RESET ================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-/* BASE */
-body {
-    font-family: 'Georgia', serif;
+/* ================= BASE ================= */
+
+body{
+    font-family:'Georgia', serif;
     background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-    color: #f5f5f5;
-    min-height: 100vh;
-    scroll-behavior: smooth;
+    color:#f5f5f5;
+    min-height:100vh;
+    scroll-behavior:smooth;
 }
 
-.intro {
-    font-size: 1.2rem;
-    line-height: 1.9;
-    margin-bottom: 25px;
-    opacity: 0;
-    animation: fadeUp 1.8s ease forwards;
+/* ================= ESTRUTURA ================= */
+
+.section{
+    padding:80px 20px;
+    display:flex;
+    justify-content:center;
 }
 
-.intro.secondary {
-    font-style: italic;
-    color: #dcdcdc;
-    margin-bottom: 50px;
-}
-
-/* ESTRUTURA */
-.section {
-    padding: 80px 20px;
-    display: flex;
-    justify-content: center;
-}
-
-.container {
-    max-width: 1000px;
-    width: 100%;
-    text-align: center;
-    animation: fadeUp 1.6s ease forwards;
-    opacity: 0;
-}
-
-/* TÍTULOS */
-.title {
-    font-size: 3rem;
-    letter-spacing: 2px;
-    margin-bottom: 40px;
-    animation: fadeDown 1.2s ease forwards;
-    opacity: 0;
-}
-
-strong {
-    font-size: 2em;
-}
-
-/* TEXTO */
-p {
-    font-size: 1.15rem;
-    line-height: 1.9;
-    margin-bottom: 22px;
-}
-
-/* DESTAQUES */
-.highlight {
-    font-style: italic;
-    color: #ffd369;
-    margin-top: 30px;
-}
-
-.final {
-    font-size: 1.4rem;
-    margin-top: 40px;
-}
-
-.final strong {
-    display: block;
-    margin-top: 10px;
-    font-size: 1.6rem;
-}
-
-/* VÍDEOS */
-.videos {
-    background: rgba(0, 0, 0, 0.15);
-}
-
-.video-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-}
-
-.video iframe {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    border-radius: 12px;
-    border: none;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
-}
-
-/* FOOTER */
-.footer {
-    background: rgba(0, 0, 0, 0.25);
-    padding: 50px 20px;
-    width: 100%;
-}
-
-.footer-content {
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    animation: fadeUp 1.2s ease forwards;
-    opacity: 0;
-}
-
-/* TEXTOS */
-.footer-text {
-    font-size: 1.05rem;
-    line-height: 1.6;
-}
-
-.footer-heart {
-    font-size: 1.25rem;
-    line-height: 1.6;
-}
-
-.footer-heart strong {
-    color: #ffd369;
-}
-
-.footer-signature {
-    font-size: 0.95rem;
-    font-style: italic;
-    opacity: 0.8;
-}
-
-/* CORAÇÃO ANIMADO */
-.footer-heart span {
-    display: inline-block;
-    animation: pulse 1.6s infinite;
-}
-
-/* ANIMAÇÃO */
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.12); }
-    100% { transform: scale(1); }
-}
-
-/* MOBILE */
-@media (max-width: 600px) {
-    .footer {
-        padding: 40px 16px;
-    }
-
-    .footer-text {
-        font-size: 1rem;
-    }
-
-    .footer-heart {
-        font-size: 1.15rem;
-    }
-
-    .footer-signature {
-        font-size: 0.9rem;
-    }
-}
-
-/* TELAS GRANDES */
-@media (min-width: 1200px) {
-    .footer {
-        padding: 70px 20px;
-    }
-}
-
-
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.15); }
-    100% { transform: scale(1); }
-}
-
-
-/* ANIMAÇÕES */
-@keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeDown {
-    from {
-        opacity: 0;
-        transform: translateY(-40px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* RESPONSIVO */
-@media (max-width: 600px) {
-    .title {
-        font-size: 2.2rem;
-    }
-
-    p {
-        font-size: 1.05rem;
-    }
+.container{
+    max-width:1000px;
+    width:100%;
+    text-align:center;
 }
 
 /* ================= NAV ================= */
 
-.nav {
-    width: 100%;
-    padding: 18px 0;
-    background: rgba(0,0,0,0.35);
-    backdrop-filter: blur(8px);
+.nav{
+    width:100%;
+    padding:18px 0;
+    background:rgba(0,0,0,0.35);
+    backdrop-filter:blur(8px);
 }
 
-.nav-content {
-    max-width: 1000px;
-    margin: 0 auto;          /* centraliza o container */
-    display: flex;
-    justify-content: center; /* centraliza os links */
-    align-items: center;
-    gap: 35px;
-    flex-wrap: wrap;
+.nav-content{
+    max-width:1000px;
+    margin:0 auto;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:35px;
+    flex-wrap:wrap;
 }
 
-.nav a {
-    color: #f5f5f5;
-    text-decoration: none;
-    font-size: 1.05rem;
-    letter-spacing: 1px;
-    position: relative;
-    transition: 0.3s;
+.nav a{
+    color:#f5f5f5;
+    text-decoration:none;
+    font-size:1.05rem;
+    letter-spacing:1px;
+    position:relative;
+    transition:0.3s;
 }
 
-.nav a::after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 2px;
-    background: #ffd369;
-    left: 0;
-    bottom: -5px;
-    transition: 0.3s;
+.nav a::after{
+    content:"";
+    position:absolute;
+    width:0;
+    height:2px;
+    background:#ffd369;
+    left:0;
+    bottom:-5px;
+    transition:0.3s;
 }
 
-.nav a:hover::after {
-    width: 100%;
+.nav a:hover::after{
+    width:100%;
 }
 
-/* ================= CARTAS ================= */
+/* ================= TÍTULOS ================= */
 
-/* ================= CARTAS - 2 POR LINHA ================= */
-
-.cartas-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    margin-top: 40px;
+.title{
+    font-size:2.8rem;
+    margin-bottom:30px;
 }
 
-.carta {
-    background: rgba(255,255,255,0.08);
-    padding: 40px;
-    border-radius: 18px;
-    backdrop-filter: blur(6px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.35);
-    transition: 0.4s ease;
-    text-align: left;
-    min-height: 250px;
+.subtitle{
+    margin-top:60px;
+    margin-bottom:20px;
+    color:#ffd369;
 }
 
-.carta:hover {
-    transform: translateY(-8px);
+/* ================= TEXTOS ================= */
+
+p{
+    font-size:1.15rem;
+    line-height:1.8;
+    margin-bottom:22px;
 }
 
-.carta h3 {
-    color: #ffd369;
-    margin-bottom: 20px;
-    font-size: 1.4rem;
+.intro{
+    margin-bottom:25px;
 }
 
-.carta p {
-    font-size: 1.15rem;
-    line-height: 1.8;
+.intro.secondary{
+    font-style:italic;
+    opacity:0.85;
 }
 
-/* Responsivo - celular */
-@media (max-width: 768px) {
-    .cartas-grid {
-        grid-template-columns: 1fr;
-    }
+.highlight{
+    color:#ffd369;
+    font-style:italic;
 }
 
-/* ================= FOTOS ================= */
-
-.fotos-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
-    gap: 20px;
-    margin-top: 40px;
-}
-
-.fotos-grid img {
-    width: 100%;
-    border-radius: 14px;
-    transition: 0.4s;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.35);
-}
-
-.fotos-grid img:hover {
-    transform: scale(1.08);
-}
-
-/* LIGHTBOX */
-
-.lightbox {
-    display: none;
-    position: fixed;
-    z-index: 2000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.85);
-    justify-content: center;
-    align-items: center;
-}
-
-.lightbox img{
-    max-width: 95vw;
-    max-height: 95vh;
-    object-fit: contain;
-    border-radius:12px;
-    transition: transform 0.3s ease;
-    box-shadow:0 0 40px rgba(0,0,0,0.8);
-}
-
-.fotos-grid img {
-    cursor: pointer;
-}
-
-/* ================= CARTAS DIGITALIZADAS ================= */
-
-.cartas-escritas-grid{
-    display:grid;
-    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
-    gap:30px;
+.final{
+    font-size:1.3rem;
     margin-top:40px;
 }
 
+/* ================= GRID PADRÃO (FOTOS / CARTAS / QUADRINHOS) ================= */
+
+.fotos-grid,
+.cartas-escritas-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    margin-top:40px;
+}
+
+.fotos-grid img,
 .carta-escrita img{
     width:100%;
     border-radius:14px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.4);
+    box-shadow:0 8px 25px rgba(0,0,0,0.4);
     transition:0.4s;
     cursor:pointer;
 }
 
+.fotos-grid img:hover,
 .carta-escrita img:hover{
     transform:scale(1.05);
 }
 
-/* ================= CONTADOR DIGITAL ================= */
+/* ================= CARTAS DIGITADAS ================= */
 
-.contador-box{
+.cartas-grid{
+    display:flex;
+    flex-direction:column;
+    gap:30px;
     margin-top:40px;
-    text-align:center;
 }
 
-.contador-label{
-    font-size:0.9rem;
-    letter-spacing:3px;
-    margin-bottom:10px;
-    opacity:0.8;
+.carta{
+    background:rgba(255,255,255,0.08);
+    padding:30px;
+    border-radius:14px;
+    backdrop-filter:blur(6px);
+    box-shadow:0 8px 25px rgba(0,0,0,0.3);
+    max-width:700px;
+    margin:0 auto;
 }
 
-.contador-digital{
-    font-family: 'Courier New', monospace;
-    font-size:2.5rem;
-    letter-spacing:6px;
+.carta h3{
     color:#ffd369;
-    background:rgba(0,0,0,0.4);
-    display:inline-block;
-    padding:15px 25px;
-    border-radius:10px;
-    box-shadow:0 0 20px rgba(255,211,105,0.4);
+    margin-bottom:15px;
+}
+
+/* ================= VÍDEOS ================= */
+
+.video-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.video iframe{
+    width:100%;
+    aspect-ratio:16/9;
+    border:none;
+    border-radius:12px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.35);
 }
 
 /* ================= MÚSICAS AUTORAIS ================= */
@@ -420,31 +195,21 @@ p {
 
 .player{
     width:100%;
-    margin-bottom:5px;
+    margin-bottom:25px;
 }
 
 .letra{
     text-align:left;
-    line-height:1;
+    line-height:1.6;
     font-style:italic;
     white-space:pre-line;
 }
 
 .letra p{
-    margin-bottom: 2px;   /* diminui espaço entre blocos */
-    line-height: 1;      /* reduz altura da linha */
+    margin-bottom:8px;
 }
 
-/* ================= INSTAGRAM ================= */
-
-.instagram-grid{
-    display:grid;
-    grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
-    gap:30px;
-    margin-top:40px;
-}
-
-/* ================= AUTORIA MÚSICAS ================= */
+/* ================= AUTORIA ================= */
 
 .autor-info{
     margin-top:15px;
@@ -455,4 +220,101 @@ p {
     max-width:700px;
     margin-left:auto;
     margin-right:auto;
+}
+
+/* ================= LIGHTBOX GLOBAL ================= */
+
+.lightbox{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.95);
+    justify-content:center;
+    align-items:center;
+    z-index:3000;
+}
+
+.lightbox img{
+    max-width:95vw;
+    max-height:95vh;
+    object-fit:contain;
+    border-radius:12px;
+    transition:transform 0.3s ease;
+    box-shadow:0 0 40px rgba(0,0,0,0.8);
+}
+
+/* ================= CONTADOR DIGITAL ================= */
+
+.contador-box{
+    margin-top:40px;
+    text-align:center;
+}
+
+.contador-label{
+    font-size:0.9rem;
+    letter-spacing:3px;
+    margin-bottom:10px;
+    opacity:0.8;
+}
+
+.contador-digital{
+    font-family:'Courier New', monospace;
+    font-size:2.5rem;
+    letter-spacing:6px;
+    color:#ffd369;
+    background:rgba(0,0,0,0.4);
+    display:inline-block;
+    padding:15px 25px;
+    border-radius:10px;
+    box-shadow:0 0 20px rgba(255,211,105,0.4);
+}
+
+/* ================= FOOTER ================= */
+
+.footer{
+    background:rgba(0,0,0,0.25);
+    padding:50px 20px;
+}
+
+.footer-content{
+    max-width:900px;
+    margin:0 auto;
+    text-align:center;
+}
+
+.footer-text{
+    margin-bottom:10px;
+}
+
+.footer-heart strong{
+    color:#ffd369;
+}
+
+.footer-signature{
+    font-style:italic;
+    opacity:0.8;
+}
+
+/* ================= RESPONSIVO ================= */
+
+@media(max-width:600px){
+
+    .title{
+        font-size:2.2rem;
+    }
+
+    p{
+        font-size:1.05rem;
+    }
+
+    .nav-content{
+        gap:20px;
+    }
+
+    .contador-digital{
+        font-size:1.8rem;
+    }
 }
